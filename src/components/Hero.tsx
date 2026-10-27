@@ -88,7 +88,7 @@ export const Hero: React.FC<HeroProps> = ({ onShopMakhana, onExploreStory }) => 
               {/* Image container with aspect ratio */}
               <div className="aspect-[4/3] sm:aspect-[16/11] relative overflow-hidden bg-[#123B2A]">
                 <img
-                  src="/src/assets/images/hero_annmritam_makhana_1793080249059.jpg"
+                  src="/images/hero_annmritam_makhana_1793080249059.jpg"
                   alt="Annmritam Premium Jumbo Makhana in artisanal handcrafted bowl"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"

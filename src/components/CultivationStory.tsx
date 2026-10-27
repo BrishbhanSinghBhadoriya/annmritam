@@ -61,7 +61,7 @@ export const CultivationStory: React.FC = () => {
         <div className="rounded-2xl overflow-hidden border border-[#DDE4DA] shadow-sm mb-16 relative bg-[#0B2E22] text-white">
           <div className="aspect-[16/9] md:aspect-[21/9] relative">
             <img
-              src="/src/assets/images/story_makhana_wetlands_1793080252804.jpg"
+              src="/images/story_makhana_wetlands_1793080252804.jpg"
               alt="Mithila lotus wetlands makhana harvesting at sunrise"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover object-center opacity-90"
