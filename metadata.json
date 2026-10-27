@@ -1,0 +1,6 @@
+{
+  "name": "Annmritam - Desi Super Foods | Original & Earthly",
+  "description": "Premium Indian superfoods, featuring Annmritam Makhana, organic seeds, and wholesome traditional snacks by Original & Earthly.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
