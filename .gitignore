@@ -1,8 +1,7 @@
-c:\Users\welcome\Desktop\Brochure\SMU\SMU BCOM.pdfnode_modules/
-build/
+@"
+node_modules/
 dist/
-coverage/
-.DS_Store
-*.log
-.env*
+.env
+.env.*
 !.env.example
+"@ | Set-Content .gitignore
