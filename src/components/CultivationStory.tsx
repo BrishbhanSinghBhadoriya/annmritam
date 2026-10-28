@@ -41,24 +41,24 @@ export const CultivationStory: React.FC = () => {
   ];
 
   return (
-    <section id="sourcing-story" className="py-16 md:py-24 bg-[#F8F5EC] border-b border-[#DDE4DA]">
+    <section id="sourcing-story" className="py-16 md:py-24 bg-[#F1E2C5] border-b border-[#C8B48A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-xs uppercase font-bold tracking-widest text-[#B88A25] mb-2">
+          <p className="text-xs uppercase font-bold tracking-widest text-[#A94B2B] mb-2">
             The Sacred Craft of Indian Superfoods
           </p>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#0B2E22] tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#254A2A] tracking-tight">
             Makhana Cultivation &amp; Sourcing Story
           </h2>
-          <p className="text-sm sm:text-base text-[#6B756D] mt-3 leading-relaxed">
-            From the tranquil lotus wetlands of Mithila to your wholesome pantry table. Discover how Original &amp; Earthly preserves this 2,000-year-old agricultural heritage.
+          <p className="text-sm sm:text-base text-[#5A7260] mt-3 leading-relaxed">
+            From the tranquil lotus wetlands of Mithila to your wholesome pantry table. Discover how Original and Earthly preserves this 2,000-year-old agricultural heritage.
           </p>
         </div>
 
         {/* Hero Sourcing Visual */}
-        <div className="rounded-2xl overflow-hidden border border-[#DDE4DA] shadow-sm mb-16 relative bg-[#0B2E22] text-white">
+        <div className="rounded-2xl overflow-hidden border border-[#C8B48A] shadow-sm mb-16 relative bg-[#254A2A] text-white">
           <div className="aspect-[16/9] md:aspect-[21/9] relative">
             <img
               src="/images/story_makhana_wetlands_1793080252804.jpg"
@@ -66,12 +66,12 @@ export const CultivationStory: React.FC = () => {
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover object-center opacity-90"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0B2E22] via-[#0B2E22]/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#254A2A] via-[#254A2A]/30 to-transparent" />
           </div>
 
           <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              <span className="text-[11px] uppercase tracking-widest font-semibold text-[#D4AF37] bg-[#123B2A] px-3 py-1 rounded border border-[#D4AF37]/30">
+              <span className="text-[11px] uppercase tracking-widest font-semibold text-[#A94B2B] bg-[#1D3B20] px-3 py-1 rounded border border-[#A94B2B]/30">
                 Geographical Indication (GI) Protected
               </span>
               <h3 className="font-serif text-xl sm:text-3xl font-bold text-white mt-2">
@@ -81,8 +81,8 @@ export const CultivationStory: React.FC = () => {
                 Over 85% of the world&apos;s finest makhana originates in this unique floodplain agro-ecosystem in northern Bihar.
               </p>
             </div>
-            <div className="bg-[#123B2A]/90 backdrop-blur-md px-4 py-3 rounded-lg border border-[#D4AF37]/30 text-right shrink-0 hidden sm:block">
-              <span className="text-xs text-[#E6C568] font-bold block">100% Direct Harvester Sourcing</span>
+            <div className="bg-[#1D3B20]/90 backdrop-blur-md px-4 py-3 rounded-lg border border-[#A94B2B]/30 text-right shrink-0 hidden sm:block">
+              <span className="text-xs text-[#E8D6B8] font-bold block">100% Direct Harvester Sourcing</span>
               <span className="text-[11px] text-white/70">Fair Trade &amp; Sustainable Ponds</span>
             </div>
           </div>
@@ -95,25 +95,25 @@ export const CultivationStory: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-xl p-5 border border-[#DDE4DA] hover:border-[#B88A25] transition-all flex flex-col justify-between"
+                className="bg-white rounded-xl p-5 border border-[#C8B48A] hover:border-[#A94B2B] transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="font-serif text-2xl font-bold text-[#D4AF37]">
+                    <span className="font-serif text-2xl font-bold text-[#A94B2B]">
                       {item.step}
                     </span>
-                    <div className="w-8 h-8 rounded-full bg-[#F8F5EC] flex items-center justify-center text-[#0B2E22]">
-                      <Icon className="w-4 h-4 text-[#B88A25]" />
+                    <div className="w-8 h-8 rounded-full bg-[#F1E2C5] flex items-center justify-center text-[#254A2A]">
+                      <Icon className="w-4 h-4 text-[#A94B2B]" />
                     </div>
                   </div>
 
-                  <h4 className="font-serif text-base font-bold text-[#0B2E22] mb-1">
+                  <h4 className="font-serif text-base font-bold text-[#254A2A] mb-1">
                     {item.title}
                   </h4>
-                  <p className="text-[11px] font-semibold text-[#B88A25] uppercase tracking-wider mb-2">
+                  <p className="text-[11px] font-semibold text-[#A94B2B] uppercase tracking-wider mb-2">
                     {item.subtitle}
                   </p>
-                  <p className="text-xs text-[#6B756D] leading-relaxed">
+                  <p className="text-xs text-[#5A7260] leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -126,3 +126,4 @@ export const CultivationStory: React.FC = () => {
     </section>
   );
 };
+

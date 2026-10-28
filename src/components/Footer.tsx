@@ -8,7 +8,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
   return (
-    <footer className="bg-[#0B2E22] text-white border-t border-[#123B2A] pt-16 pb-12">
+    <footer className="bg-[#254A2A] text-white mithila-border pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Grid */}
@@ -17,31 +17,36 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
           {/* Brand Presentation Column (lg: 4 cols) */}
           <div className="lg:col-span-4 space-y-4">
             <div>
+              {/* Company name */}
+              <p className="text-[10px] uppercase tracking-[0.2em] text-[#A94B2B] font-bold mb-1">
+                Original and Earthly
+              </p>
+              {/* Product brand */}
               <div className="flex items-baseline gap-2">
-                <span className="font-serif text-2xl font-bold tracking-tight text-[#D4AF37]">
+                <span className="font-serif text-2xl font-bold tracking-tight text-[#A94B2B]">
                   Annmritam
                 </span>
                 <span className="text-[11px] uppercase tracking-wider text-white/70 font-semibold">
                   Desi Super Foods
                 </span>
               </div>
-              <p className="text-xs text-[#E6C568] font-medium mt-0.5">
-                Presented by Original &amp; Earthly
+              <p className="text-xs text-white/60 font-light mt-0.5 italic">
+                Pure nutrition, rooted in Mithila tradition.
               </p>
             </div>
 
             <p className="text-xs text-white/75 leading-relaxed font-light">
-              Original &amp; Earthly is committed to restoring pure, unadulterated traditional Indian superfoods to modern urban life. Annmritam brings you the authentic GI-tagged makhana from Mithila wetlands alongside organic nutrient-dense seeds.
+              Original and Earthly is committed to restoring pure, unadulterated traditional Indian superfoods to modern urban life. Annmritam brings you the authentic GI-tagged makhana from Mithila wetlands alongside organic nutrient-dense seeds.
             </p>
 
             <div className="pt-2 flex items-center gap-3 text-xs text-white/60">
               <span className="flex items-center gap-1">
-                <Award className="w-3.5 h-3.5 text-[#D4AF37]" />
+                <Award className="w-3.5 h-3.5 text-[#A94B2B]" />
                 <span>GI Mithila Origin</span>
               </span>
               <span>·</span>
               <span className="flex items-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#D4AF37]" />
+                <ShieldCheck className="w-3.5 h-3.5 text-[#A94B2B]" />
                 <span>FSSAI Certified</span>
               </span>
             </div>
@@ -49,14 +54,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
 
           {/* Quick Links Column (lg: 2 cols) */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="font-serif text-sm font-bold text-[#E6C568] tracking-wider uppercase">
+            <h4 className="font-serif text-sm font-bold text-[#E8D6B8] tracking-wider uppercase">
               Superfoods
             </h4>
             <ul className="space-y-2 text-xs text-white/75">
               <li>
                 <button
                   onClick={() => onNavigate('catalog', 'makhana')}
-                  className="hover:text-[#D4AF37] transition-colors cursor-pointer"
+                  className="hover:text-[#A94B2B] transition-colors cursor-pointer"
                 >
                   Jumbo Fox Nuts (Makhana)
                 </button>
@@ -64,7 +69,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
               <li>
                 <button
                   onClick={() => onNavigate('catalog', 'roasted-makhana')}
-                  className="hover:text-[#D4AF37] transition-colors cursor-pointer"
+                  className="hover:text-[#A94B2B] transition-colors cursor-pointer"
                 >
                   Roasted Ghee Makhana
                 </button>
@@ -72,7 +77,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
               <li>
                 <button
                   onClick={() => onNavigate('catalog', 'flax-seeds')}
-                  className="hover:text-[#D4AF37] transition-colors cursor-pointer"
+                  className="hover:text-[#A94B2B] transition-colors cursor-pointer"
                 >
                   Organic Flax Seeds
                 </button>
@@ -80,7 +85,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
               <li>
                 <button
                   onClick={() => onNavigate('catalog', 'pumpkin-seeds')}
-                  className="hover:text-[#D4AF37] transition-colors cursor-pointer"
+                  className="hover:text-[#A94B2B] transition-colors cursor-pointer"
                 >
                   Raw Pumpkin Pepitas
                 </button>
@@ -88,7 +93,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
               <li>
                 <button
                   onClick={() => onNavigate('catalog', 'chia-seeds')}
-                  className="hover:text-[#D4AF37] transition-colors cursor-pointer"
+                  className="hover:text-[#A94B2B] transition-colors cursor-pointer"
                 >
                   Black Chia Seeds
                 </button>
@@ -96,7 +101,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
               <li>
                 <button
                   onClick={() => onNavigate('catalog', 'combos')}
-                  className="hover:text-[#D4AF37] transition-colors cursor-pointer"
+                  className="hover:text-[#A94B2B] transition-colors cursor-pointer"
                 >
                   Superfood Combos
                 </button>
@@ -106,22 +111,22 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
 
           {/* Company & Story (lg: 3 cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-serif text-sm font-bold text-[#E6C568] tracking-wider uppercase">
-              Original &amp; Earthly
+            <h4 className="font-serif text-sm font-bold text-[#E8D6B8] tracking-wider uppercase">
+              Original and Earthly
             </h4>
             <ul className="space-y-2 text-xs text-white/75">
               <li>
                 <button
                   onClick={() => onNavigate('about')}
-                  className="hover:text-[#D4AF37] transition-colors cursor-pointer"
+                  className="hover:text-[#A94B2B] transition-colors cursor-pointer"
                 >
-                  About Original &amp; Earthly
+                  About Original and Earthly
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => onNavigate('story')}
-                  className="hover:text-[#D4AF37] transition-colors cursor-pointer"
+                  className="hover:text-[#A94B2B] transition-colors cursor-pointer"
                 >
                   Mithila Sourcing &amp; Harvester Welfare
                 </button>
@@ -129,7 +134,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
               <li>
                 <button
                   onClick={() => onOpenPolicy('shipping')}
-                  className="hover:text-[#D4AF37] transition-colors cursor-pointer"
+                  className="hover:text-[#A94B2B] transition-colors cursor-pointer"
                 >
                   Shipping &amp; Delivery Policy
                 </button>
@@ -137,7 +142,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
               <li>
                 <button
                   onClick={() => onOpenPolicy('returns')}
-                  className="hover:text-[#D4AF37] transition-colors cursor-pointer"
+                  className="hover:text-[#A94B2B] transition-colors cursor-pointer"
                 >
                   Returns &amp; Replacement Policy
                 </button>
@@ -145,7 +150,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
               <li>
                 <button
                   onClick={() => onOpenPolicy('privacy')}
-                  className="hover:text-[#D4AF37] transition-colors cursor-pointer"
+                  className="hover:text-[#A94B2B] transition-colors cursor-pointer"
                 >
                   Privacy Policy
                 </button>
@@ -153,7 +158,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
               <li>
                 <button
                   onClick={() => onOpenPolicy('terms')}
-                  className="hover:text-[#D4AF37] transition-colors cursor-pointer"
+                  className="hover:text-[#A94B2B] transition-colors cursor-pointer"
                 >
                   Terms &amp; Conditions
                 </button>
@@ -163,24 +168,24 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
 
           {/* Contact & Support (lg: 3 cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-serif text-sm font-bold text-[#E6C568] tracking-wider uppercase">
+            <h4 className="font-serif text-sm font-bold text-[#E8D6B8] tracking-wider uppercase">
               Customer Care
             </h4>
             
             <div className="space-y-2 text-xs text-white/75">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#A94B2B] shrink-0 mt-0.5" />
                 <span>
-                  <strong>Original &amp; Earthly Foods Pvt. Ltd.</strong><br />
+                  <strong>Original and Earthly Foods Pvt. Ltd.</strong><br />
                   Plot 42, Heritage Agri-Zone, Darbhanga &amp; New Delhi, India
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#D4AF37] shrink-0" />
+                <Phone className="w-4 h-4 text-[#A94B2B] shrink-0" />
                 <span>+91 98765 43210 (Mon–Sat, 9AM–6PM IST)</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#D4AF37] shrink-0" />
+                <Mail className="w-4 h-4 text-[#A94B2B] shrink-0" />
                 <span>care@originalearthly.com</span>
               </div>
             </div>
@@ -195,8 +200,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
 
         {/* Bottom Bar: Copyright & Payment Security */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60">
-          <div>
-            &copy; {new Date().getFullYear()} <strong>Original &amp; Earthly Foods</strong>. All Rights Reserved. Annmritam is a registered trademark.
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-[#A94B2B] shrink-0" />
+            &copy; {new Date().getFullYear()} <strong>Original and Earthly Foods</strong>. All Rights Reserved. Annmritam is a registered trademark.
           </div>
 
           <div className="flex flex-wrap items-center gap-2 text-[11px] text-white/50">
@@ -218,3 +224,4 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPolicy }) => {
     </footer>
   );
 };
+

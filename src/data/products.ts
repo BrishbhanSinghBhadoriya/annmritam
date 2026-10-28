@@ -418,3 +418,4 @@ export const CATEGORIES_LIST = [
   { id: 'mixed-seeds', label: 'Mixed Seeds', count: 1 },
   { id: 'combos', label: 'Superfood Combos', count: 1 },
 ];
+

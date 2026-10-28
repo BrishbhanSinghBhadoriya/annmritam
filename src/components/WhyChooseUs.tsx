@@ -26,19 +26,19 @@ export const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#0B2E22] text-white border-b border-[#123B2A] relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-[#254A2A] text-white mithila-border mithila-border-bottom relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-xs uppercase font-bold tracking-widest text-[#D4AF37] mb-2">
+          <p className="text-xs uppercase font-bold tracking-widest text-[#A94B2B] mb-2">
             Purity Without Compromise
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-white">
             Why Choose Annmritam Superfoods
           </h2>
           <p className="text-sm sm:text-base text-white/80 mt-3 leading-relaxed font-light">
-            Presented by Original &amp; Earthly, we bridge age-old Indian agricultural wisdom with modern quality testing so you can nourish your family with absolute peace of mind.
+            Presented by Original and Earthly, we bridge age-old Indian agricultural wisdom with modern quality testing so you can nourish your family with absolute peace of mind.
           </p>
         </div>
 
@@ -49,13 +49,13 @@ export const WhyChooseUs: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-[#123B2A] rounded-xl p-6 border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-300 flex flex-col justify-between"
+                className="bg-[#1D3B20] rounded-xl p-6 border border-[#A94B2B]/20 hover:border-[#A94B2B]/50 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-lg bg-[#0B2E22] border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] mb-5">
+                  <div className="w-12 h-12 rounded-lg bg-[#254A2A] border border-[#A94B2B]/30 flex items-center justify-center text-[#A94B2B] mb-5">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="font-serif text-lg font-bold text-[#E6C568] mb-2">
+                  <h3 className="font-serif text-lg font-bold text-[#E8D6B8] mb-2">
                     {pillar.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
@@ -63,9 +63,10 @@ export const WhyChooseUs: React.FC = () => {
                   </p>
                 </div>
                 
-                <div className="pt-4 mt-4 border-t border-white/10 flex items-center gap-1.5 text-[11px] text-[#D4AF37]">
+                <div className="pt-4 mt-4 border-t border-white/10 flex items-center gap-1.5 text-[11px] text-[#A94B2B]">
                   <CheckCircle2 className="w-3.5 h-3.5" />
                   <span>Verified Standard</span>
+                  <span className="ml-auto w-2 h-2 rounded-full bg-[#A94B2B]" />
                 </div>
               </div>
             );
@@ -73,12 +74,12 @@ export const WhyChooseUs: React.FC = () => {
         </div>
 
         {/* Highlight quote banner */}
-        <div className="mt-14 bg-[#123B2A]/70 rounded-xl p-6 border border-white/10 text-center max-w-2xl mx-auto">
-          <p className="font-serif text-base sm:text-lg italic text-[#E6C568]">
+        <div className="mt-14 bg-[#1D3B20]/70 rounded-xl p-6 border border-white/10 text-center max-w-2xl mx-auto">
+          <p className="font-serif text-base sm:text-lg italic text-[#E8D6B8]">
             &ldquo;Food that is pure, traditional, and cultivated in harmony with the earth is the truest medicine for body and mind.&rdquo;
           </p>
           <p className="text-xs text-white/60 uppercase tracking-widest mt-2">
-            The Philosophy of Original &amp; Earthly
+            The Philosophy of Original and Earthly
           </p>
         </div>
 
@@ -86,3 +87,4 @@ export const WhyChooseUs: React.FC = () => {
     </section>
   );
 };
+

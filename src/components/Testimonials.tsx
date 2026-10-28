@@ -30,18 +30,18 @@ export const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-white border-b border-[#DDE4DA]">
+    <section className="py-16 md:py-20 bg-white mithila-border mithila-border-bottom">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <p className="text-xs uppercase font-bold tracking-widest text-[#B88A25] mb-2">
+          <p className="text-xs uppercase font-bold tracking-widest text-[#A94B2B] mb-2">
             Trusted Across India
           </p>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#0B2E22]">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#254A2A]">
             Loved by Conscious Indian Households
           </h2>
-          <p className="text-sm text-[#6B756D] mt-2">
+          <p className="text-sm text-[#5A7260] mt-2">
             Authentic experiences from nutritionists, ayurvedic practitioners, and families choosing wholesome nourishment.
           </p>
         </div>
@@ -51,30 +51,30 @@ export const Testimonials: React.FC = () => {
           {reviews.map((rev, idx) => (
             <div
               key={idx}
-              className="bg-[#F8F5EC] rounded-2xl p-6 sm:p-7 border border-[#DDE4DA] flex flex-col justify-between relative"
+              className="bg-[#F1E2C5] rounded-2xl p-6 sm:p-7 border border-[#C8B48A] flex flex-col justify-between relative"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-1 text-[#D4AF37]">
+                  <div className="flex items-center gap-1 text-[#A94B2B]">
                     {[...Array(rev.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <Quote className="w-6 h-6 text-[#0B2E22]/15" />
+                  <Quote className="w-6 h-6 text-[#A94B2B]/25" />
                 </div>
 
-                <p className="text-xs sm:text-sm text-[#24352B] leading-relaxed mb-6 font-normal">
+                <p className="text-xs sm:text-sm text-[#1E3320] leading-relaxed mb-6 font-normal">
                   &ldquo;{rev.content}&rdquo;
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#DDE4DA]">
+              <div className="pt-4 border-t border-[#C8B48A]">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h4 className="font-bold text-xs sm:text-sm text-[#0B2E22]">
+                    <h4 className="font-bold text-xs sm:text-sm text-[#254A2A]">
                       {rev.name}
                     </h4>
-                    <p className="text-[11px] text-[#6B756D]">{rev.role}</p>
+                    <p className="text-[11px] text-[#5A7260]">{rev.role}</p>
                   </div>
                   {rev.verified && (
                     <span className="flex items-center gap-1 text-[10px] text-emerald-800 bg-emerald-100/60 px-2 py-0.5 rounded font-medium">
@@ -83,7 +83,7 @@ export const Testimonials: React.FC = () => {
                     </span>
                   )}
                 </div>
-                <div className="mt-2 text-[10px] text-[#B88A25] font-semibold">
+                <div className="mt-2 text-[10px] text-[#A94B2B] font-semibold">
                   Verified Buyer · {rev.product}
                 </div>
               </div>
@@ -95,3 +95,4 @@ export const Testimonials: React.FC = () => {
     </section>
   );
 };
+

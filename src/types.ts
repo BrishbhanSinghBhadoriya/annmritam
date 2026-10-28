@@ -101,3 +101,4 @@ export interface PlacedOrder {
   status: 'Confirmed' | 'Processing' | 'Shipped' | 'Delivered';
   estimatedDelivery: string;
 }
+

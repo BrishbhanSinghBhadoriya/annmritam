@@ -11,19 +11,19 @@ export const CategoryShowcase: React.FC<CategoryShowcaseProps> = ({
   onSelectCategory,
 }) => {
   return (
-    <section className="py-12 bg-white border-b border-[#DDE4DA]">
+    <section className="py-12 bg-white mithila-border-bottom">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
           <div>
-            <p className="text-xs uppercase font-bold tracking-widest text-[#B88A25] mb-1">
+            <p className="text-xs uppercase font-bold tracking-widest text-[#A94B2B] mb-1">
               Desi Superfoods Range
             </p>
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#0B2E22]">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#254A2A]">
               Explore Superfood Categories
             </h2>
           </div>
-          <p className="text-xs text-[#6B756D] max-w-md">
+          <p className="text-xs text-[#5A7260] max-w-md">
             Wholesome harvest from trusted Indian farms, packed fresh without artificial preservatives or processing.
           </p>
         </div>
@@ -38,8 +38,8 @@ export const CategoryShowcase: React.FC<CategoryShowcaseProps> = ({
                 onClick={() => onSelectCategory(cat.id)}
                 className={`px-4 py-2 text-xs sm:text-sm font-medium rounded-lg whitespace-nowrap transition-all cursor-pointer shrink-0 ${
                   isActive
-                    ? 'bg-[#0B2E22] text-[#D4AF37] shadow-sm font-semibold'
-                    : 'bg-[#F8F5EC] text-[#24352B] hover:bg-[#DDE4DA]/60 border border-[#DDE4DA]'
+                    ? 'bg-[#254A2A] text-[#A94B2B] shadow-sm font-semibold'
+                    : 'bg-[#F1E2C5] text-[#1E3320] hover:bg-[#C8B48A]/60 border border-[#C8B48A]'
                 }`}
               >
                 {cat.label}
@@ -52,3 +52,4 @@ export const CategoryShowcase: React.FC<CategoryShowcaseProps> = ({
     </section>
   );
 };
+

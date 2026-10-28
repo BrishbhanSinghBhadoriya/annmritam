@@ -80,16 +80,16 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
   const isFiltered = selectedCategory !== 'all' || selectedDietary !== 'all' || searchQuery !== '';
 
   return (
-    <section id="catalog-section" className="py-12 md:py-16 bg-[#F8F5EC]">
+    <section id="catalog-section" className="py-12 md:py-16 bg-[#F1E2C5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Title & Toolbar */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-8">
           <div>
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#0B2E22]">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#254A2A]">
               Superfood Pantry Collection
             </h2>
-            <p className="text-xs text-[#6B756D] mt-1">
+            <p className="text-xs text-[#5A7260] mt-1">
               Showing {filteredProducts.length} authentic products by Annmritam
             </p>
           </div>
@@ -98,18 +98,18 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
           <div className="flex flex-wrap items-center gap-3">
             {/* Search Input */}
             <div className="relative flex-1 sm:w-64">
-              <Search className="w-4 h-4 text-[#6B756D] absolute left-3 top-1/2 -translate-y-1/2" />
+              <Search className="w-4 h-4 text-[#5A7260] absolute left-3 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 placeholder="Search makhana, seeds..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-9 pr-3 py-2 text-xs bg-white border border-[#DDE4DA] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#0B2E22] text-[#24352B]"
+                className="w-full pl-9 pr-3 py-2 text-xs bg-white border border-[#C8B48A] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#254A2A] text-[#1E3320]"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-[#6B756D] hover:text-[#0B2E22]"
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-[#5A7260] hover:text-[#254A2A]"
                 >
                   ✕
                 </button>
@@ -118,12 +118,12 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
 
             {/* Sort Dropdown */}
             <div className="flex items-center gap-2">
-              <span className="text-xs text-[#6B756D] hidden sm:inline whitespace-nowrap">Sort by:</span>
+              <span className="text-xs text-[#5A7260] hidden sm:inline whitespace-nowrap">Sort by:</span>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
                 aria-label="Sort products"
-                className="bg-white border border-[#DDE4DA] text-xs text-[#24352B] py-2 px-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#0B2E22] cursor-pointer"
+                className="bg-white border border-[#C8B48A] text-xs text-[#1E3320] py-2 px-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#254A2A] cursor-pointer"
               >
                 <option value="featured">Featured First</option>
                 <option value="price-asc">Price: Low to High</option>
@@ -135,9 +135,9 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
             {/* Filter Toggle Mobile */}
             <button
               onClick={() => setShowFiltersMobile(!showFiltersMobile)}
-              className="lg:hidden flex items-center gap-1.5 px-3 py-2 text-xs bg-white border border-[#DDE4DA] rounded-lg text-[#24352B]"
+              className="lg:hidden flex items-center gap-1.5 px-3 py-2 text-xs bg-white border border-[#C8B48A] rounded-lg text-[#1E3320]"
             >
-              <SlidersHorizontal className="w-3.5 h-3.5 text-[#B88A25]" />
+              <SlidersHorizontal className="w-3.5 h-3.5 text-[#A94B2B]" />
               <span>Filters</span>
             </button>
           </div>
@@ -145,16 +145,16 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
 
         {/* Dietary Filter Buttons Bar */}
         <div className={`mb-8 ${showFiltersMobile ? 'block' : 'hidden lg:block'}`}>
-          <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-[#DDE4DA]">
-            <span className="text-xs font-semibold text-[#6B756D] mr-2">Dietary:</span>
+          <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-[#C8B48A]">
+            <span className="text-xs font-semibold text-[#5A7260] mr-2">Dietary:</span>
             {dietaryOptions.map((opt) => (
               <button
                 key={opt.id}
                 onClick={() => setSelectedDietary(opt.id)}
                 className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors cursor-pointer ${
                   selectedDietary === opt.id
-                    ? 'bg-[#0B2E22] text-[#D4AF37]'
-                    : 'bg-white border border-[#DDE4DA] text-[#6B756D] hover:text-[#0B2E22]'
+                    ? 'bg-[#254A2A] text-[#A94B2B]'
+                    : 'bg-white border border-[#C8B48A] text-[#5A7260] hover:text-[#254A2A]'
                 }`}
               >
                 {opt.label}
@@ -186,17 +186,17 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
           </div>
         ) : (
           /* Empty Search / Filter State */
-          <div className="text-center py-16 bg-white rounded-2xl border border-[#DDE4DA] p-8 max-w-lg mx-auto">
-            <div className="w-12 h-12 rounded-full bg-[#F8F5EC] text-[#B88A25] flex items-center justify-center mx-auto mb-3 font-serif text-xl font-bold">
+          <div className="text-center py-16 bg-white rounded-2xl border border-[#C8B48A] p-8 max-w-lg mx-auto">
+            <div className="w-12 h-12 rounded-full bg-[#F1E2C5] text-[#A94B2B] flex items-center justify-center mx-auto mb-3 font-serif text-xl font-bold">
               ∅
             </div>
-            <h3 className="font-serif text-lg font-bold text-[#0B2E22]">No superfoods matched</h3>
-            <p className="text-xs text-[#6B756D] mt-1 mb-4">
+            <h3 className="font-serif text-lg font-bold text-[#254A2A]">No superfoods matched</h3>
+            <p className="text-xs text-[#5A7260] mt-1 mb-4">
               We couldn't find any products matching your active filters or search terms.
             </p>
             <button
               onClick={resetAllFilters}
-              className="bg-[#0B2E22] text-[#D4AF37] px-4 py-2 text-xs font-semibold rounded-lg hover:bg-[#123B2A] transition-colors"
+              className="bg-[#254A2A] text-[#A94B2B] px-4 py-2 text-xs font-semibold rounded-lg hover:bg-[#1D3B20] transition-colors"
             >
               Reset All Filters
             </button>
@@ -207,3 +207,4 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
     </section>
   );
 };
+

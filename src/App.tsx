@@ -67,7 +67,7 @@ function MainStore() {
   const wishlistedProducts = PRODUCTS.filter((p) => wishlist.includes(p.id));
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F8F5EC] text-[#24352B]">
+    <div className="min-h-screen flex flex-col bg-[#F1E2C5] text-[#1E3320]">
       
       {/* Universal Top Header */}
       <Header
@@ -140,10 +140,10 @@ function MainStore() {
         {currentView === 'catalog' && (
           <div className="py-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
-              <div className="bg-[#0B2E22] text-white p-8 rounded-2xl border border-[#123B2A] flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+              <div className="bg-[#254A2A] text-white p-8 rounded-2xl border border-[#1D3B20] flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">
-                    Original &amp; Earthly
+                  <span className="text-[9px] uppercase tracking-[0.2em] text-[#A94B2B] font-bold block mb-0.5">
+                    Original and Earthly
                   </span>
                   <h1 className="font-serif text-3xl sm:text-4xl font-bold mt-1 text-white">
                     Annmritam Superfoods Collection
@@ -154,7 +154,7 @@ function MainStore() {
                 </div>
                 <button
                   onClick={() => handleNavigate('home')}
-                  className="text-xs font-semibold text-[#D4AF37] hover:underline cursor-pointer"
+                  className="text-xs font-semibold text-[#A94B2B] hover:underline cursor-pointer"
                 >
                   &larr; Return to Homepage
                 </button>
@@ -177,15 +177,18 @@ function MainStore() {
 
         {currentView === 'story' && (
           <div>
-            <div className="bg-[#0B2E22] text-white py-12 px-4 sm:px-6 lg:px-8 text-center">
-              <span className="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">
+            <div className="bg-[#254A2A] text-white py-12 px-4 sm:px-6 lg:px-8 text-center">
+              <p className="text-[9px] uppercase tracking-[0.2em] text-[#A94B2B] font-bold mb-1">
+                Original and Earthly
+              </p>
+              <span className="text-xs uppercase tracking-widest text-[#A94B2B] font-bold">
                 Origin &amp; Heritage
               </span>
               <h1 className="font-serif text-3xl sm:text-5xl font-bold mt-2 text-white">
-                Mithila Wetland Harvesting
+                Annmritam Makhana — Mithila Wetland Harvesting
               </h1>
               <p className="text-sm sm:text-base text-white/80 max-w-2xl mx-auto mt-2 font-light">
-                Discover the traditional agricultural legacy of Annmritam Makhana, championed by Original &amp; Earthly.
+                Discover the traditional agricultural legacy of Annmritam, championed by Original and Earthly.
               </p>
             </div>
             <CultivationStory />
@@ -198,16 +201,16 @@ function MainStore() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="mb-8 flex items-center justify-between">
               <div>
-                <h1 className="font-serif text-3xl font-bold text-[#0B2E22]">
+                <h1 className="font-serif text-3xl font-bold text-[#254A2A]">
                   Your Saved Superfoods ({wishlistedProducts.length})
                 </h1>
-                <p className="text-xs text-[#6B756D] mt-1">
+                <p className="text-xs text-[#5A7260] mt-1">
                   Keep track of your favorite Annmritam fox nuts and seeds.
                 </p>
               </div>
               <button
                 onClick={() => handleNavigate('catalog')}
-                className="text-xs font-bold text-[#B88A25] hover:text-[#0B2E22] cursor-pointer"
+                className="text-xs font-bold text-[#A94B2B] hover:text-[#254A2A] cursor-pointer"
               >
                 Browse All Products &rarr;
               </button>
@@ -216,7 +219,7 @@ function MainStore() {
             {wishlistedProducts.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {wishlistedProducts.map((p) => (
-                  <div key={p.id} className="bg-white rounded-xl border border-[#DDE4DA] p-4 flex flex-col justify-between">
+                  <div key={p.id} className="bg-white rounded-xl border border-[#C8B48A] p-4 flex flex-col justify-between">
                     <div>
                       <img
                         src={p.image}
@@ -224,18 +227,18 @@ function MainStore() {
                         referrerPolicy="no-referrer"
                         className="w-full aspect-[4/3] object-cover rounded-lg mb-3"
                       />
-                      <span className="text-[10px] uppercase font-bold text-[#B88A25]">{p.brand}</span>
-                      <h3 className="font-serif text-sm font-bold text-[#0B2E22] line-clamp-1">{p.name}</h3>
-                      <p className="text-xs text-[#6B756D] line-clamp-1">{p.subtitle}</p>
+                      <span className="text-[10px] uppercase font-bold text-[#A94B2B]">{p.brand}</span>
+                      <h3 className="font-serif text-sm font-bold text-[#254A2A] line-clamp-1">{p.name}</h3>
+                      <p className="text-xs text-[#5A7260] line-clamp-1">{p.subtitle}</p>
                     </div>
 
-                    <div className="pt-3 mt-3 border-t border-[#DDE4DA] flex items-center justify-between">
-                      <span className="font-serif font-bold text-sm text-[#0B2E22]">
+                    <div className="pt-3 mt-3 border-t border-[#C8B48A] flex items-center justify-between">
+                      <span className="font-serif font-bold text-sm text-[#254A2A]">
                         ₹{p.packSizes[0].price}
                       </span>
                       <button
                         onClick={() => addToCart(p, p.defaultPackIndex, 1)}
-                        className="bg-[#B88A25] hover:bg-[#D4AF37] text-[#0B2E22] px-3 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer"
+                        className="bg-[#A94B2B] hover:bg-[#A94B2B] text-[#254A2A] px-3 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer"
                       >
                         Add to Cart
                       </button>
@@ -244,15 +247,15 @@ function MainStore() {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-16 bg-white rounded-2xl border border-[#DDE4DA] p-8 max-w-md mx-auto space-y-3">
-                <Heart className="w-12 h-12 text-[#6B756D] mx-auto" />
-                <h3 className="font-serif text-lg font-bold text-[#0B2E22]">Your wishlist is empty</h3>
-                <p className="text-xs text-[#6B756D]">
+              <div className="text-center py-16 bg-white rounded-2xl border border-[#C8B48A] p-8 max-w-md mx-auto space-y-3">
+                <Heart className="w-12 h-12 text-[#5A7260] mx-auto" />
+                <h3 className="font-serif text-lg font-bold text-[#254A2A]">Your wishlist is empty</h3>
+                <p className="text-xs text-[#5A7260]">
                   Click the heart icon on any superfood to save it for later.
                 </p>
                 <button
                   onClick={() => handleNavigate('catalog')}
-                  className="bg-[#0B2E22] text-[#D4AF37] px-4 py-2 rounded-lg text-xs font-semibold cursor-pointer"
+                  className="bg-[#254A2A] text-[#A94B2B] px-4 py-2 rounded-lg text-xs font-semibold cursor-pointer"
                 >
                   Explore Annmritam Makhana
                 </button>
@@ -329,3 +332,4 @@ export default function App() {
     </CartProvider>
   );
 }
+

@@ -26,10 +26,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
   return (
     <div
       onClick={() => onQuickView(product)}
-      className="group bg-white rounded-xl border border-[#DDE4DA] overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col justify-between cursor-pointer"
+      className="group bg-white rounded-xl border border-[#C8B48A] overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col justify-between cursor-pointer"
     >
       {/* Top Image Container */}
-      <div className="relative aspect-[4/3] bg-[#F8F5EC] overflow-hidden border-b border-[#DDE4DA]/60">
+      <div className="relative aspect-[4/3] bg-[#F1E2C5] overflow-hidden border-b border-[#C8B48A]/60">
         <img
           src={product.image}
           alt={product.name}
@@ -39,12 +39,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
 
         {/* Minimal Unboxed Text Tag */}
         {product.isBestSeller && (
-          <div className="absolute top-2.5 left-2.5 bg-[#0B2E22] text-[#E6C568] text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded shadow-xs">
+          <div className="absolute top-2.5 left-2.5 bg-[#254A2A] text-[#E8D6B8] text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded shadow-xs">
             Bestseller
           </div>
         )}
         {!product.isBestSeller && product.isNew && (
-          <div className="absolute top-2.5 left-2.5 bg-[#B88A25] text-white text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded shadow-xs">
+          <div className="absolute top-2.5 left-2.5 bg-[#A94B2B] text-white text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded shadow-xs">
             New Harvest
           </div>
         )}
@@ -58,7 +58,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
           className={`absolute top-2.5 right-2.5 p-1.5 rounded-full backdrop-blur-sm transition-colors ${
             isWishlisted
               ? 'bg-rose-50 text-rose-600 border border-rose-200'
-              : 'bg-white/80 text-[#6B756D] hover:text-[#0B2E22] border border-[#DDE4DA]'
+              : 'bg-white/80 text-[#5A7260] hover:text-[#254A2A] border border-[#C8B48A]'
           }`}
           aria-label={isWishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
         >
@@ -71,32 +71,32 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
         
         <div>
           {/* Brand & Category */}
-          <div className="flex items-center justify-between text-[11px] text-[#6B756D] mb-1">
-            <span className="uppercase tracking-wider font-semibold text-[#B88A25]">
+          <div className="flex items-center justify-between text-[11px] text-[#5A7260] mb-1">
+            <span className="uppercase tracking-wider font-semibold text-[#A94B2B]">
               {product.brand}
             </span>
-            <span className="flex items-center gap-0.5 text-[#24352B]">
-              <Star className="w-3 h-3 fill-[#D4AF37] text-[#D4AF37]" />
+            <span className="flex items-center gap-0.5 text-[#1E3320]">
+              <Star className="w-3 h-3 fill-[#A94B2B] text-[#A94B2B]" />
               <span className="font-semibold">{product.rating}</span>
             </span>
           </div>
 
           {/* Title */}
-          <h3 className="font-serif text-base font-bold text-[#0B2E22] line-clamp-1 group-hover:text-[#B88A25] transition-colors">
+          <h3 className="font-serif text-base font-bold text-[#254A2A] line-clamp-1 group-hover:text-[#A94B2B] transition-colors">
             {product.name}
           </h3>
 
           {/* Subtitle / Key Claim */}
-          <p className="text-xs text-[#6B756D] line-clamp-1 mt-0.5">
+          <p className="text-xs text-[#5A7260] line-clamp-1 mt-0.5">
             {product.subtitle}
           </p>
         </div>
 
         {/* Pack Selector (Segmented buttons) */}
         <div className="space-y-1.5" onClick={(e) => e.stopPropagation()}>
-          <div className="text-[10px] uppercase tracking-wider text-[#6B756D] font-medium flex items-center justify-between">
+          <div className="text-[10px] uppercase tracking-wider text-[#5A7260] font-medium flex items-center justify-between">
             <span>Pack Size</span>
-            <span className="text-[#0B2E22] font-semibold">{currentPack.label}</span>
+            <span className="text-[#254A2A] font-semibold">{currentPack.label}</span>
           </div>
 
           <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
@@ -106,8 +106,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
                 onClick={() => setSelectedPackIndex(idx)}
                 className={`px-2 py-1 text-[11px] font-medium rounded border transition-all cursor-pointer whitespace-nowrap shrink-0 ${
                   selectedPackIndex === idx
-                    ? 'border-[#0B2E22] bg-[#0B2E22] text-[#E6C568] font-bold'
-                    : 'border-[#DDE4DA] bg-[#F8F5EC] text-[#24352B] hover:border-[#B88A25]'
+                    ? 'border-[#254A2A] bg-[#254A2A] text-[#E8D6B8] font-bold'
+                    : 'border-[#C8B48A] bg-[#F1E2C5] text-[#1E3320] hover:border-[#A94B2B]'
                 }`}
               >
                 {pack.label}
@@ -117,13 +117,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
         </div>
 
         {/* Price & Add to Cart Action */}
-        <div className="pt-2 border-t border-[#DDE4DA] flex items-center justify-between gap-2">
+        <div className="pt-2 border-t border-[#C8B48A] flex items-center justify-between gap-2">
           <div>
             <div className="flex items-baseline gap-1.5">
-              <span className="font-serif text-lg font-bold text-[#0B2E22] tabular-nums">
+              <span className="font-serif text-lg font-bold text-[#254A2A] tabular-nums">
                 ₹{currentPack.price}
               </span>
-              <span className="text-xs text-[#6B756D] line-through tabular-nums">
+              <span className="text-xs text-[#5A7260] line-through tabular-nums">
                 ₹{currentPack.originalPrice}
               </span>
             </div>
@@ -137,7 +137,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
             className={`p-2.5 rounded-lg font-semibold text-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer shrink-0 ${
               justAdded
                 ? 'bg-emerald-600 text-white'
-                : 'bg-[#B88A25] hover:bg-[#D4AF37] text-[#0B2E22]'
+                : 'bg-[#A94B2B] hover:bg-[#A94B2B] text-[#254A2A]'
             }`}
             aria-label={`Add ${product.name} to cart`}
           >
@@ -159,3 +159,4 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
     </div>
   );
 };
+

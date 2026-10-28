@@ -45,31 +45,31 @@ export const SearchModal: React.FC<SearchModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-xs flex items-start justify-center pt-16 sm:pt-24 px-4 animate-in fade-in duration-150">
       <div
-        className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-[#DDE4DA] overflow-hidden"
+        className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-[#C8B48A] overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search Input Bar */}
-        <div className="p-4 sm:p-5 border-b border-[#DDE4DA] flex items-center gap-3 bg-[#F8F5EC]">
-          <Search className="w-5 h-5 text-[#B88A25] shrink-0" />
+        <div className="p-4 sm:p-5 border-b border-[#C8B48A] flex items-center gap-3 bg-[#F1E2C5]">
+          <Search className="w-5 h-5 text-[#A94B2B] shrink-0" />
           <input
             type="text"
             autoFocus
             placeholder="Search Annmritam superfoods, makhana, seeds..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="flex-1 bg-transparent text-sm sm:text-base text-[#0B2E22] placeholder-[#6B756D] focus:outline-none"
+            className="flex-1 bg-transparent text-sm sm:text-base text-[#254A2A] placeholder-[#5A7260] focus:outline-none"
           />
           {query && (
             <button
               onClick={() => setQuery('')}
-              className="text-xs text-[#6B756D] hover:text-[#0B2E22] px-1.5 py-0.5 rounded cursor-pointer"
+              className="text-xs text-[#5A7260] hover:text-[#254A2A] px-1.5 py-0.5 rounded cursor-pointer"
             >
               Clear
             </button>
           )}
           <button
             onClick={onClose}
-            className="p-1 rounded-full text-[#6B756D] hover:text-[#0B2E22] hover:bg-black/5 cursor-pointer"
+            className="p-1 rounded-full text-[#5A7260] hover:text-[#254A2A] hover:bg-black/5 cursor-pointer"
             aria-label="Close search"
           >
             <X className="w-5 h-5" />
@@ -79,7 +79,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
         {/* Popular Tags */}
         {!query && (
           <div className="p-6 text-xs">
-            <span className="font-semibold text-[#6B756D] uppercase tracking-wider block mb-2.5">
+            <span className="font-semibold text-[#5A7260] uppercase tracking-wider block mb-2.5">
               Popular Searches
             </span>
             <div className="flex flex-wrap gap-2">
@@ -87,7 +87,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                 <button
                   key={idx}
                   onClick={() => setQuery(term)}
-                  className="bg-[#F8F5EC] hover:bg-[#0B2E22] hover:text-[#D4AF37] text-[#24352B] border border-[#DDE4DA] px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
+                  className="bg-[#F1E2C5] hover:bg-[#254A2A] hover:text-[#A94B2B] text-[#1E3320] border border-[#C8B48A] px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
                 >
                   {term}
                 </button>
@@ -98,7 +98,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
 
         {/* Results List */}
         {query && (
-          <div className="p-4 max-h-96 overflow-y-auto divide-y divide-[#DDE4DA]">
+          <div className="p-4 max-h-96 overflow-y-auto divide-y divide-[#C8B48A]">
             {searchResults.length > 0 ? (
               searchResults.map((product) => (
                 <div
@@ -107,38 +107,38 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                     onClose();
                     onSelectProduct(product);
                   }}
-                  className="py-3 px-2 flex items-center justify-between hover:bg-[#F8F5EC] rounded-lg transition-colors cursor-pointer group"
+                  className="py-3 px-2 flex items-center justify-between hover:bg-[#F1E2C5] rounded-lg transition-colors cursor-pointer group"
                 >
                   <div className="flex items-center gap-3">
                     <img
                       src={product.image}
                       alt={product.name}
                       referrerPolicy="no-referrer"
-                      className="w-12 h-12 rounded object-cover border border-[#DDE4DA]"
+                      className="w-12 h-12 rounded object-cover border border-[#C8B48A]"
                     />
                     <div>
-                      <h4 className="font-serif text-sm font-bold text-[#0B2E22] group-hover:text-[#B88A25]">
+                      <h4 className="font-serif text-sm font-bold text-[#254A2A] group-hover:text-[#A94B2B]">
                         {product.name}
                       </h4>
-                      <p className="text-xs text-[#6B756D]">{product.subtitle}</p>
+                      <p className="text-xs text-[#5A7260]">{product.subtitle}</p>
                     </div>
                   </div>
 
                   <div className="text-right flex items-center gap-3">
                     <div>
-                      <div className="font-serif font-bold text-sm text-[#0B2E22]">
+                      <div className="font-serif font-bold text-sm text-[#254A2A]">
                         ₹{product.packSizes[0].price}
                       </div>
-                      <div className="text-[10px] text-[#6B756D]">
+                      <div className="text-[10px] text-[#5A7260]">
                         from {product.packSizes[0].label}
                       </div>
                     </div>
-                    <ArrowRight className="w-4 h-4 text-[#6B756D] group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 text-[#5A7260] group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               ))
             ) : (
-              <div className="py-8 text-center text-xs text-[#6B756D]">
+              <div className="py-8 text-center text-xs text-[#5A7260]">
                 No superfoods found for &ldquo;{query}&rdquo;. Try &ldquo;makhana&rdquo; or &ldquo;seeds&rdquo;.
               </div>
             )}
@@ -149,3 +149,4 @@ export const SearchModal: React.FC<SearchModalProps> = ({
     </div>
   );
 };
+
